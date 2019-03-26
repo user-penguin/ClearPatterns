@@ -1,13 +1,13 @@
-package model;
+package model.engine;
 
-public class Engine {
+public class CarEngine implements Engine {
     private int RPM;
     private final int maxRPM = 7000;
     private final int minRPM = 300;
     private boolean isStarted;
     private boolean isBroken;
 
-    Engine () {
+    public CarEngine() {
         RPM = 0;
         isStarted = false;
         isBroken = false;
@@ -36,18 +36,21 @@ public class Engine {
         isStarted = false;
     }
 
-    public int getMaxRPM() {
-        return maxRPM;
+    public int getRPM() {
+        return RPM;
     }
 
-    public void setRPM(int RPM) {
+    public boolean setRPM(int RPM) {
         if (RPM == maxRPM) {
             isStarted = false;
             isBroken = true;
+            return false;
         } else if (RPM <= minRPM) {
             isStarted = false;
+            return false;
         } else {
             this.RPM = RPM;
+            return true;
         }
     }
 }
