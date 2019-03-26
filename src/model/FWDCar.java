@@ -1,6 +1,6 @@
 package model;
 
-public class FWDCar implements Car {
+public class FWDCar extends Car {
     @Override
     public void setAcceleration() {
 

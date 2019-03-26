@@ -1,6 +1,6 @@
 package model;
 
-public class SUV implements Car {
+public class SUV extends Car {
     @Override
     public void setAcceleration() {
 

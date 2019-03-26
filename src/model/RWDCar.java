@@ -1,6 +1,6 @@
 package model;
 
-public class RWDCar implements Car {
+public class RWDCar extends Car {
     @Override
     public void startEngine() {
 
