@@ -16,6 +16,11 @@ public class RWDCar extends Car {
     }
 
     @Override
+    String setGear() {
+        return null;
+    }
+
+    @Override
     public String setAcceleration(int RPM) {
         return ecu.setRPM(RPM);
     }

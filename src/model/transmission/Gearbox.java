@@ -5,7 +5,5 @@ public interface Gearbox {
 
     String getType();
 
-    void setType(String type);
-
-    int getSpeed(int rotation);
+    double getSpeed(int rotation);
 }

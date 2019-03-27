@@ -1,7 +1,7 @@
 package model.сar;
 
-public class SUV extends Car {
-    SUV () {
+public class AWDCar extends Car {
+    AWDCar() {
         super();
     }
     @Override
@@ -17,5 +17,10 @@ public class SUV extends Car {
     @Override
     public String stopEngine() {
         return ecu.stopEngine();
+    }
+
+    @Override
+    String setGear() {
+        return null;
     }
 }

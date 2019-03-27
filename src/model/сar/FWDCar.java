@@ -18,4 +18,9 @@ public class FWDCar extends Car {
     public String stopEngine() {
         return ecu.stopEngine();
     }
+
+    @Override
+    String setGear() {
+        return null;
+    }
 }
