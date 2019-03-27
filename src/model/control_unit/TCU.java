@@ -5,13 +5,16 @@ import model.transmission.Gearbox;
 
 public class TCU implements ControlUnit {
     private Gearbox gearbox;
-    private Differential frontDifferential;
-    private Differential rearDifferential;
 
-    public TCU(Gearbox gearbox, Differential frontDifferential, Differential rearDifferential) {
+    public TCU() {
+    }
+
+    public void setTransmission(Gearbox gearbox) {
         this.gearbox = gearbox;
-        this.frontDifferential = frontDifferential;
-        this.rearDifferential = rearDifferential;
+    }
+
+    public TCU(Gearbox gearbox) {
+        this.gearbox = gearbox;
     }
 
     @Override

@@ -1,43 +1,13 @@
 package model.transmission;
 
-public class AWDTransmission implements AWDFeatures, Gearbox {
+public class AWDTransmission implements Gearbox {
     private final double[] gears = {0, 6, 5, 4, 3.3, 2};
     private final String type = "AWD";
     private int currentGear = 0;
 
-    private Differential frontDifferential;
-    private Differential centralDifferential;
-    private Differential rearDifferential;
 
-    @Override
-    public void lockCentral() {
-        centralDifferential.locking();
-    }
 
-    @Override
-    public void unlockCentral() {
-        centralDifferential.unlocking();
-    }
 
-    @Override
-    public void lockRear() {
-        rearDifferential.locking();
-    }
-
-    @Override
-    public void unlockRear() {
-        rearDifferential.unlocking();
-    }
-
-    @Override
-    public void lockFront() {
-        frontDifferential.locking();
-    }
-
-    @Override
-    public void unlockFront() {
-        frontDifferential.unlocking();
-    }
 
     @Override
     public double getSpeed (int rotation) {

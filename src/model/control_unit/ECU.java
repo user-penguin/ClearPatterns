@@ -1,12 +1,20 @@
 package model.control_unit;
 
 import model.engine.CarEngine;
+import model.engine.Engine;
 
 public class ECU implements ControlUnit {
     private CarEngine carEngine;
 
     public ECU (CarEngine carEngine) {
         this.carEngine = carEngine;
+    }
+
+    public ECU() {
+    }
+
+    public void setCarEngine (Engine engine) {
+        this.carEngine = (CarEngine) engine;
     }
 
     public String startEngine () {

@@ -12,4 +12,9 @@ public class ConcreteDifferential implements Differential {
     public void unlocking() {
 
     }
+
+    @Override
+    public boolean isLocking() {
+        return isLocked;
+    }
 }
