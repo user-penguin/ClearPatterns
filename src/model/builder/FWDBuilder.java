@@ -4,10 +4,7 @@ import model.control_unit.ControlUnit;
 import model.control_unit.ECU;
 import model.control_unit.TCU;
 import model.engine.Engine;
-import model.transmission.ConcreteWheel;
-import model.transmission.FWDTransmission;
-import model.transmission.Gearbox;
-import model.transmission.Wheel;
+import model.transmission.*;
 import model.сar.FWDCar;
 
 public class FWDBuilder implements Builder {
@@ -28,7 +25,7 @@ public class FWDBuilder implements Builder {
     }
 
     @Override
-    public void addAWDFeatures() {
+    public void addAWDFeatures(AWDFeatures awdFeatures) {
 
     }
 

@@ -1,6 +1,4 @@
 package model.control_unit;
-
-import model.transmission.Differential;
 import model.transmission.Gearbox;
 
 public class TCU implements ControlUnit {

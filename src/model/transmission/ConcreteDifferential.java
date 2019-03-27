@@ -5,16 +5,16 @@ public class ConcreteDifferential implements Differential {
 
     @Override
     public void locking() {
-
+        isLocked = true;
     }
 
     @Override
     public void unlocking() {
-
+        isLocked = false;
     }
 
     @Override
-    public boolean isLocking() {
+    public boolean isLocked() {
         return isLocked;
     }
 }

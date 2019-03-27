@@ -11,6 +11,16 @@ public class FWDTransmission implements Gearbox {
     }
 
     @Override
+    public void setAWDFeatures(AWDFeatures awdFeatures) {
+
+    }
+
+    @Override
+    public AWDFeatures getAWDFeatures() {
+        return null;
+    }
+
+    @Override
     public boolean setGear(int numOfGear) {
         if (numOfGear >= gears.length || numOfGear < 0) {
             return false;

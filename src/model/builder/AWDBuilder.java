@@ -2,6 +2,7 @@ package model.builder;
 
 import model.control_unit.ControlUnit;
 import model.engine.Engine;
+import model.transmission.AWDFeatures;
 import model.transmission.Gearbox;
 import model.transmission.Wheel;
 import model.сar.AWDCar;
@@ -14,6 +15,11 @@ public class AWDBuilder implements Builder {
 
     @Override
     public void addTransmission(Gearbox gearbox) {
+
+    }
+
+    @Override
+    public void addAWDFeatures(AWDFeatures awdFeatures) {
 
     }
 

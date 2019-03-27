@@ -1,11 +1,11 @@
 package model.transmission;
 
-public class AWDStarterPack implements AWDFeatures {
-
+public class ConcreteAWDFeatures implements AWDFeatures {
     private Differential frontDifferential;
     private Differential centralDifferential;
     private Differential rearDifferential;
 
+    // работа с дифференциалами, всё это будет возвращаться при делегировании в  блок управления коробкой
     @Override
     public void lockCentral() {
         centralDifferential.locking();
@@ -34,5 +34,21 @@ public class AWDStarterPack implements AWDFeatures {
     @Override
     public void unlockFront() {
         frontDifferential.unlocking();
+    }
+
+    // проверка состояния дифференциалов
+    @Override
+    public boolean isFrontLocked () {
+        return frontDifferential.isLocked();
+    }
+
+    @Override
+    public boolean isRearLocked () {
+        return rearDifferential.isLocked();
+    }
+
+    @Override
+    public boolean isCentralLocked() {
+        return centralDifferential.isLocked();
     }
 }

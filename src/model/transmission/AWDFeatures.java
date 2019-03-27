@@ -12,4 +12,10 @@ public interface AWDFeatures {
     void lockFront();
 
     void unlockFront();
+
+    boolean isCentralLocked();
+
+    boolean isFrontLocked();
+
+    boolean isRearLocked();
 }
